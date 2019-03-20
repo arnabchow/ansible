@@ -11,17 +11,3 @@
         file:
           name: /tmp/ansible.txt
           state: touch
-  - hosts:
-        myservers
-    become: yes
-    tasks:
-      - name: deleteing a user
-        user:
-          name: sam1
-          shell: /bin/false
-          state: absent
-      - name: removing file
-        file:
-          name: /tmp/ansible.txt
-          state: absent
-

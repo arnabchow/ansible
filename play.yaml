@@ -1,0 +1,13 @@
+---
+  - hosts: 
+        myservers
+    become: yes
+    tasks: 
+      - name: createing a user
+        user: 
+          name: sam1
+          shell: /bin/false
+      - name: adding file
+        file:
+          name: /tmp/ansible.txt
+          state: touch
